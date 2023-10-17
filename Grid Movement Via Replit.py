@@ -5,59 +5,26 @@ from readchar import readchar
 import time
 
 
-class Coord:
-
-  def __init__(self, x, y):
-    self.x = x
-    self.y = y
-
-
-MapX = 10
-
-MapY = 10
-
-P = Coord(0, 0)
-
-BaseMap = [["#"] * MapX for _ in range(MapY)]
-
-
-def Render(Map):
-  RenderMap = Map
-
-  display = ""
-  for a in range(MapY):
-    for i in range(MapX):
-      if a == P.y and i == P.x:
-        display += "P"
-      else:
-        display += RenderMap[i][a]
-    display += "\n"
-
-  print(display)
-
-
 def Run():
-  clear()
-  Render(BaseMap)
+  # Live checking for keypressing
   while True:
+    # Reading the latest input
     input = readchar()
+
+    # Checking what was pressed
     if input == "w":
-      if P.y != 0:
-        P.y -= 1
-        Run()
+      # Run function relating keypress "w"
     elif input == "d":
-      if P.x != MapX:
-        P.x += 1
-        Run()
+      # Run function relating keypress "a"
     elif input == "s":
-      if P.y != MapY:
-        P.y += 1
-        Run()
+      # Run function relating keypress "s"
     elif input == "a":
-      if P.x != 0:
-        P.x -= 1
-        Run()
+      # Run function relating keypress "d"
+    elif input == readchar.SPACE:
+      # Run function relating keypress "space"
+
+    # Sleep to prevent infinite loop crashes
     time.sleep(.1)
 
-
+# Calling the program
 Run()
