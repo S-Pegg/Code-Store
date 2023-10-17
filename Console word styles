@@ -1,0 +1,26 @@
+# Code to print out every "style" of word in the replit console
+# Affected text begins with the style code, and ended in the "end" code
+
+#   PURPLE = '\033[95m'
+#   CYAN = '\033[96m'
+#   DARKCYAN = '\033[36m'
+#   BLUE = '\033[94m'
+#   GREEN = '\033[92m'
+#   YELLOW = '\033[93m'
+#   RED = '\033[91m'
+#   BOLD = '\033[1m'
+#   UNDERLINE = '\033[4m'
+#   END = '\033[0m'
+
+Styles = [
+    '\033[95m', '\033[96m', '\033[36m', '\033[94m', '\033[92m', '\033[93m',
+    '\033[91m', '\033[1m', '\033[4m'
+]
+end = '\033[0m'
+
+Names = [
+    "Purple", "Cyan", "Dark Cyan", "Blue", "Green", "Yellow", "Red", "Bold",
+    "Underline"
+]
+for i in range(9):
+  print(f"{Styles[i]} {Names[i]} {end}")
