@@ -9,3 +9,7 @@ try:
   #If there is an error / excemption, do this
 except:
   print("An error has occured")
+
+  # The Finally clause is code that runs regardless of an error or not
+finally:
+  print("The Code has been run")
