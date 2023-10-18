@@ -1,0 +1,11 @@
+
+# Error checking and data.
+# This allows for a custom error return. Be it a print, function or other things.
+
+# The code is attempted to be run
+try:
+  print(int(input("To Print")))
+
+  #If there is an error / excemption, do this
+except:
+  print("An error has occured")
